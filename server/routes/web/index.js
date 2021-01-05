@@ -1,6 +1,6 @@
 module.exports = app => {
     const router = require('express').Router()
-    const ObjectID = require('mongodb').ObjectId;
+    // const Object = require('mongodb').ObjectId;
     
 
     router.get('/musics/list', async (req, res) => {
@@ -9,11 +9,12 @@ module.exports = app => {
         res.send(music)
     })
 
-    // router.get('/Music/list', async (req, res) => {
-    //     let {_id} = req.query
-    //     _id = new ObjectID(_id)
+    // router.get('/Music/search', async (req, res) => {
+    //     let {name, title} = req.query
+    //     name = new Object(name)
+    //     title = new Object(title)
     //     req.Model = require(`../../models/Music`)
-    //     const music = await req.Model.findOne({_id: _id})
+    //     const music = await req.Model.find({title: title} || {name: name})
     //     res.send(music)
     // })
 
